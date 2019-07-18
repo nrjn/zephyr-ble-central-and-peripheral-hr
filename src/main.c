@@ -298,21 +298,10 @@ void main(void)
 	bt_conn_cb_register(&conn_callbacks);
 	bt_conn_auth_cb_register(&auth_cb_display);
 
-
-	// err = bt_le_scan_start(BT_LE_SCAN_ACTIVE, device_found);
-	// if (err) {
-	// 	printk("Scanning failed to start (err %d)\n", err);
-	// 	return;
-	// }
-	// printk("Scanning successfully started\n");
-
 	while (1) {
 		k_sleep(MSEC_PER_SEC);
 
 		/* Heartrate measurements simulation */
 		hrs_notify();
-
-		/* Battery level simulation */
-		// bas_notify();
 	}
 }
